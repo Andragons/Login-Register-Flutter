@@ -30,6 +30,7 @@
 //   }
 // }
 
+import 'package:coba/screens/verification/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
@@ -38,6 +39,7 @@ import 'package:coba/screens/home/home.dart';
 import 'package:coba/screens/sign_in/sign_in.dart';
 
 import '../config.dart';
+// import 'home/home1.dart';
 
 class Root extends StatelessWidget {
   const Root({Key? key}) : super(key: key);

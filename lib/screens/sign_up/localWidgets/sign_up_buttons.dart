@@ -1,5 +1,6 @@
 import 'package:coba/controller/authController.dart';
 import 'package:coba/screens/root.dart';
+import 'package:coba/screens/verification/verification.dart';
 import 'package:coba/widgets/rounded_elevated_button.dart';
 import 'package:coba/widgets/text_with_textbutton.dart';
 import 'package:flutter/material.dart';
@@ -35,15 +36,16 @@ class SignUpButtons extends StatelessWidget {
       child: Column(
         children: [
           RoundedElevatedButton(
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                String name = _nameController.text.trim();
-                String email = _emailController.text.trim();
-                String password = _passwordController.text;
+            onPressed: () => Get.off(Verification()),
+            // {
+            //   if (_formKey.currentState!.validate()) {
+            //     String name = _nameController.text.trim();
+            //     String email = _emailController.text.trim();
+            //     String password = _passwordController.text;
 
-                _authController.signUp(name, email, password);
-              }
-            },
+            //     _authController.signUp(name, email, password);
+            //   }
+            // },
             title: 'Sign Up',
             padding: EdgeInsets.symmetric(
               horizontal: Config.screenWidth! * 0.38,

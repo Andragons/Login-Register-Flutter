@@ -1,9 +1,10 @@
 import 'package:coba/config.dart';
 import 'package:coba/screens/verification/localWidgets/verification_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:otp_text_field/otp_field.dart';
+import 'package:otp_text_field/style.dart';
+// import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 class VerificationForm extends StatefulWidget {
   const VerificationForm({Key? key}) : super(key: key);
@@ -20,11 +21,26 @@ class _VerificationFormState extends State<VerificationForm> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 5,
+      flex: 4,
       child: Form(
         child: Column(
           children: [
-            otp(),
+            OtpTextField(
+              numberOfFields: 5,
+              fillColor: Colors.black.withOpacity(0.1),
+              filled: true,
+            ),
+            // OTPTextField(
+            //   length: 5,
+            //   width: MediaQuery.of(context).size.width,
+            //   fieldWidth: 40,
+            //   style: TextStyle(fontSize: 17),
+            //   textFieldAlignment: MainAxisAlignment.spaceAround,
+            //   fieldStyle: FieldStyle.underline,
+            //   onCompleted: (pin) {
+            //     print("Completed: " + pin);
+            //   },
+            // ),
             SizedBox(
               height: Config.screenHeight! * 0.04,
             ),
@@ -38,15 +54,11 @@ class _VerificationFormState extends State<VerificationForm> {
     );
   }
 
-  Widget otp() {
-    return Column(
-      children: [
-        OtpTextField(
-          numberOfFields: 5,
-          fillColor: Colors.black.withOpacity(0.1),
-          filled: true,
-        ),
-      ],
-    );
-  }
+  // Widget otp() {
+  //   return Column(
+  //     children: [
+
+  //     ],
+  //   );
+  // }
 }

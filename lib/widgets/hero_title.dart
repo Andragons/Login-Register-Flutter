@@ -34,7 +34,7 @@ class HeroTitle extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: Config.screenHeight! * 0.05,
+                height: Config.screenHeight! * 0.01,
               ),
             ],
           ),

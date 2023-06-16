@@ -34,6 +34,7 @@ class _SignUpState extends State<SignUp> {
                   subtitle: 'Create an account...',
                 ),
                 buildTextFormFields(),
+                SizedBox(height: Config.screenHeight! * 0.1),
                 SignUpButtons(
                     formKey: _formKey,
                     nameController: _nameController,
@@ -49,7 +50,7 @@ class _SignUpState extends State<SignUp> {
 
   Expanded buildTextFormFields() {
     return Expanded(
-      flex: 8,
+      flex: 5,
       child: Column(
         children: [
           Flexible(

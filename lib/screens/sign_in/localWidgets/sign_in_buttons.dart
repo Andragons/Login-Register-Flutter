@@ -61,9 +61,11 @@
 //         ],
 //       ),
 //     );
-//   }
+//   } 
 // }
 
+import 'package:coba/screens/home/home.dart';
+import 'package:coba/screens/verification/verification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:coba/controller/authController.dart';
@@ -113,15 +115,18 @@ class SignInButtons extends StatelessWidget {
             ),
           ),
           RoundedElevatedButton(
-            title: 'Sign in',
-            onPressed: () {
-              if (_formKey.currentState!.validate()) {
-                String email = _emailController.text.trim();
-                String password = _passwordController.text;
+            title: 'Sign In',
+            onPressed: () => Get.off(Home()),
+            // onPressed: Navigator.push(context,
+            //     MaterialPageRoute(builder: (context) => Verification())),
+            // {
+            //   if (_formKey.currentState!.validate()) {
+            //     String email = _emailController.text.trim();
+            //     String password = _passwordController.text;
 
-                _authController.signIn(email, password);
-              }
-            },
+            //     _authController.signIn(email, password);
+            //   }
+            // },
             padding: EdgeInsets.symmetric(
               horizontal: Config.screenWidth! * 0.4,
               vertical: Config.screenHeight! * 0.02,
